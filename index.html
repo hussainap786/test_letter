@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<title>A Special Delivery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Dancing+Script:wght@500;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ambient night sky, present behind every scene -->
+<div class="sky" id="sky">
+  <div class="stars" id="stars"></div>
+  <div class="moon">
+    <div class="moon-glow"></div>
+  </div>
+  <svg class="hills" viewBox="0 0 1440 260" preserveAspectRatio="none">
+    <path d="M0,180 C240,120 420,220 720,160 C980,110 1220,200 1440,140 L1440,260 L0,260 Z" fill="#0a1230"/>
+    <path d="M0,220 C300,180 500,240 800,200 C1060,168 1260,230 1440,200 L1440,260 L0,260 Z" fill="#060a1f"/>
+  </svg>
+  <div class="petal-field" id="petalField"></div>
+</div>
+
+<main id="app">
+
+  <!-- SCENE 1 — Loading -->
+  <section class="scene scene--loading" data-scene="loading" id="scene-loading">
+    <p class="eyebrow">a special delivery</p>
+    <h1 class="title-serif loading-title">A Special Delivery</h1>
+    <p class="loading-sub" id="loadingSub">gathering starlight&hellip;</p>
+    <div class="loading-bar"><div class="loading-bar__fill" id="loadingFill"></div></div>
+  </section>
+
+  <!-- SCENE 2 & 3 & 4 — Postman: arrival, lilies, letter -->
+  <section class="scene scene--postman" data-scene="postman" id="scene-postman">
+    <div class="postman-stage">
+      <div class="speech-bubble" id="speechBubble"><span id="speechText">Hey! I have a special delivery for you.</span></div>
+
+      <!-- Postman SVG (hand-drawn storybook style, walk-cycle via CSS) -->
+      <div class="postman" id="postman">
+        <svg viewBox="0 0 220 260" class="postman-svg" id="postmanSvg">
+          <ellipse cx="110" cy="248" rx="70" ry="10" class="postman-shadow"/>
+          <g class="pm-back-arm pm-limb">
+            <rect x="128" y="118" width="16" height="60" rx="8" fill="#2b3e6b"/>
+          </g>
+          <g class="pm-back-leg pm-limb">
+            <rect x="96" y="176" width="18" height="58" rx="9" fill="#16234a"/>
+            <ellipse cx="105" cy="238" rx="14" ry="8" fill="#0c1733"/>
+          </g>
+          <g class="pm-front-leg pm-limb">
+            <rect x="126" y="176" width="18" height="58" rx="9" fill="#1a2c58"/>
+            <ellipse cx="135" cy="238" rx="14" ry="8" fill="#0c1733"/>
+          </g>
+          <rect x="80" y="108" width="70" height="80" rx="22" fill="#2f4a8c"/>
+          <rect x="80" y="108" width="70" height="26" rx="13" fill="#24397a"/>
+          <rect x="72" y="130" width="26" height="46" rx="10" fill="#3a1f14" class="pm-bag"/>
+          <circle cx="112" cy="78" r="34" fill="#e8b48a"/>
+          <path d="M78 66 Q112 32 146 66 Q146 46 112 40 Q78 46 78 66 Z" fill="#3a2a1e"/>
+          <rect x="82" y="52" width="60" height="20" rx="10" fill="#182c62" class="pm-cap"/>
+          <circle cx="118" cy="42" r="5" fill="#e7b23f"/>
+          <circle cx="100" cy="82" r="3" fill="#2a1a12"/>
+          <circle cx="126" cy="82" r="3" fill="#2a1a12"/>
+          <path d="M100 96 Q112 104 124 96" stroke="#2a1a12" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          <g class="pm-front-arm pm-limb">
+            <rect x="140" y="118" width="16" height="56" rx="8" fill="#3a58a0"/>
+            <g class="pm-hand-goods">
+              <ellipse cx="150" cy="150" rx="20" ry="16" fill="#fff" class="lily-cluster"/>
+              <ellipse cx="140" cy="146" rx="9" ry="12" fill="#fbfbfb"/>
+              <ellipse cx="155" cy="142" rx="9" ry="12" fill="#f6f6f6"/>
+              <ellipse cx="150" cy="156" rx="9" ry="12" fill="#fefefe"/>
+              <circle cx="140" cy="146" r="3" fill="#e7b23f"/>
+              <circle cx="155" cy="142" r="3" fill="#e7b23f"/>
+              <circle cx="150" cy="156" r="3" fill="#e7b23f"/>
+              <rect x="146" y="158" width="6" height="26" rx="3" fill="#5a7d3f"/>
+              <rect x="176" y="146" width="30" height="22" rx="3" fill="#f3e9d8" class="pm-envelope-mini" stroke="#caa14a" stroke-width="1.5"/>
+              <path d="M176 146 L191 160 L206 146" fill="none" stroke="#caa14a" stroke-width="1.5"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <!-- lilies once handed over -->
+      <div class="handoff-lilies" id="handoffLilies">
+        <svg viewBox="0 0 160 230" class="lilies-svg">
+          <!-- stems, converging into one bundle -->
+          <path d="M80 148 L80 200" stroke="#5a7d3f" stroke-width="5" stroke-linecap="round"/>
+          <path d="M80 148 Q66 172 62 202" stroke="#6b8f4c" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+          <path d="M80 148 Q94 172 98 202" stroke="#6b8f4c" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+          <path d="M80 148 Q52 168 46 198" stroke="#7ba05a" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M80 148 Q108 168 114 198" stroke="#7ba05a" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <!-- a couple of small leaves -->
+          <path d="M70 178 Q54 176 48 164" stroke="#5a7d3f" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M90 178 Q106 176 112 164" stroke="#5a7d3f" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+          <!-- lily cluster -->
+          <g class="lily-bloom" transform="translate(-30,10) scale(0.78) rotate(-14 80 90)">
+            <ellipse cx="80" cy="90" rx="14" ry="34" fill="#f7f7f7" transform="rotate(0 80 90)"/>
+            <ellipse cx="80" cy="90" rx="14" ry="34" fill="#f2f2f2" transform="rotate(60 80 90)"/>
+            <ellipse cx="80" cy="90" rx="14" ry="34" fill="#efefef" transform="rotate(120 80 90)"/>
+            <circle cx="80" cy="90" r="8" fill="#e7b23f"/>
+          </g>
+          <g class="lily-bloom" transform="translate(28,10) scale(0.78) rotate(14 80 90)">
+            <ellipse cx="80" cy="90" rx="14" ry="34" fill="#f7f7f7" transform="rotate(0 80 90)"/>
+            <ellipse cx="80" cy="90" rx="14" ry="34" fill="#f2f2f2" transform="rotate(60 80 90)"/>
+            <ellipse cx="80" cy="90" rx="14" ry="34" fill="#efefef" transform="rotate(120 80 90)"/>
+            <circle cx="80" cy="90" r="8" fill="#e7b23f"/>
+          </g>
+          <g class="lily-bloom" transform="translate(-14,-16) scale(0.88) rotate(-4 80 90)">
+            <ellipse cx="80" cy="90" rx="15" ry="36" fill="#ffffff" transform="rotate(0 80 90)"/>
+            <ellipse cx="80" cy="90" rx="15" ry="36" fill="#fbfbfb" transform="rotate(60 80 90)"/>
+            <ellipse cx="80" cy="90" rx="15" ry="36" fill="#f7f7f7" transform="rotate(120 80 90)"/>
+            <circle cx="80" cy="90" r="8.5" fill="#e7b23f"/>
+          </g>
+          <g class="lily-bloom" transform="translate(16,-16) scale(0.88) rotate(4 80 90)">
+            <ellipse cx="80" cy="90" rx="15" ry="36" fill="#ffffff" transform="rotate(0 80 90)"/>
+            <ellipse cx="80" cy="90" rx="15" ry="36" fill="#fbfbfb" transform="rotate(60 80 90)"/>
+            <ellipse cx="80" cy="90" rx="15" ry="36" fill="#f7f7f7" transform="rotate(120 80 90)"/>
+            <circle cx="80" cy="90" r="8.5" fill="#e7b23f"/>
+          </g>
+          <g class="lily-bloom" transform="translate(0,-30) scale(0.96)">
+            <ellipse cx="80" cy="90" rx="15" ry="37" fill="#ffffff" transform="rotate(0 80 90)"/>
+            <ellipse cx="80" cy="90" rx="15" ry="37" fill="#fbfbfb" transform="rotate(60 80 90)"/>
+            <ellipse cx="80" cy="90" rx="15" ry="37" fill="#f7f7f7" transform="rotate(120 80 90)"/>
+            <circle cx="80" cy="90" r="9" fill="#e7b23f"/>
+          </g>
+
+          <!-- satin ribbon tied around the stem bundle -->
+          <g class="ribbon">
+            <path d="M58 200 Q80 192 102 200 L100 214 Q80 208 60 214 Z" fill="#c9536b"/>
+            <path d="M58 200 Q80 192 102 200" stroke="#e88a9e" stroke-width="1.4" fill="none" opacity="0.7"/>
+            <!-- bow -->
+            <path d="M80 198 C60 186 42 192 44 206 C46 218 64 214 80 200 Z" fill="#d8637a"/>
+            <path d="M80 198 C100 186 118 192 116 206 C114 218 96 214 80 200 Z" fill="#c9536b"/>
+            <circle cx="80" cy="200" r="6" fill="#b8455c"/>
+            <path d="M76 204 L66 228 L76 224 L80 234 L84 224 L94 228 L84 204 Z" fill="#c9536b" opacity="0.95"/>
+          </g>
+        </svg>
+        <p class="handoff-caption">A bouquet of white lilies, tied with a satin ribbon &mdash; for you.</p>
+      </div>
+
+      <!-- envelope carried, then floats to center -->
+      <div class="handoff-envelope" id="handoffEnvelope">
+        <svg viewBox="0 0 160 110" class="mini-env-svg">
+          <rect x="6" y="6" width="148" height="98" rx="6" fill="#f3e9d8" stroke="#caa14a" stroke-width="2"/>
+          <path d="M6 10 L80 68 L154 10" fill="none" stroke="#caa14a" stroke-width="2"/>
+          <circle cx="80" cy="52" r="10" fill="#c9536b"/>
+        </svg>
+      </div>
+
+      <p class="tap-hint" id="tapHint">tap the postman</p>
+    </div>
+  </section>
+
+  <!-- SCENE 5 — Envelope opening -->
+  <section class="scene scene--envelope" data-scene="envelope" id="scene-envelope">
+    <p class="tap-hint" id="envHint">tap the envelope</p>
+    <div class="envelope" id="envelope">
+      <div class="envelope__sparkle-burst" id="sparkleBurst"></div>
+      <div class="envelope__back"></div>
+      <div class="envelope__letter" id="envLetterPaper">
+        <div class="envelope__letter-lines"></div>
+      </div>
+      <div class="envelope__flap"></div>
+      <div class="envelope__front-left"></div>
+      <div class="envelope__front-right"></div>
+      <div class="envelope__seal">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#c9536b"/><text x="20" y="26" text-anchor="middle" font-size="18" fill="#f8e9c9" font-family="Playfair Display, serif">&amp;</text></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCENE 6 — Typewriter letter -->
+  <section class="scene scene--letter" data-scene="letter" id="scene-letter">
+    <div class="letter-card">
+      <p class="letter-date">19 April 2023</p>
+      <p class="letter-body" id="letterBody"></p>
+      <span class="letter-caret" id="letterCaret">|</span>
+    </div>
+    <button class="btn btn--ghost" id="nextThingBtn">One More Thing&hellip;</button>
+  </section>
+
+  <!-- SCENE 8 — Timer -->
+  <section class="scene scene--timer" data-scene="timer" id="scene-timer">
+    <div class="floral-card">
+      <svg class="floral-corner floral-corner--tl" viewBox="0 0 120 120"><g opacity="0.5"><ellipse cx="30" cy="30" rx="9" ry="20" fill="#f3c9d4" transform="rotate(20 30 30)"/><ellipse cx="30" cy="30" rx="9" ry="20" fill="#f6d9e0" transform="rotate(80 30 30)"/><ellipse cx="30" cy="30" rx="9" ry="20" fill="#efc0cc" transform="rotate(140 30 30)"/><circle cx="30" cy="30" r="5" fill="#e7b23f"/><ellipse cx="72" cy="12" rx="6" ry="13" fill="#f3c9d4" opacity="0.7" transform="rotate(35 72 12)"/></g></svg>
+      <svg class="floral-corner floral-corner--br" viewBox="0 0 120 120"><g opacity="0.5"><ellipse cx="90" cy="90" rx="9" ry="20" fill="#f3c9d4" transform="rotate(20 90 90)"/><ellipse cx="90" cy="90" rx="9" ry="20" fill="#f6d9e0" transform="rotate(80 90 90)"/><ellipse cx="90" cy="90" rx="9" ry="20" fill="#efc0cc" transform="rotate(140 90 90)"/><circle cx="90" cy="90" r="5" fill="#e7b23f"/><ellipse cx="46" cy="106" rx="6" ry="13" fill="#f3c9d4" opacity="0.7" transform="rotate(-35 46 106)"/></g></svg>
+
+      <p class="floral-heading">every second with you <span class="heart-outline">&#9825;</span></p>
+
+      <div class="timer" id="timer">
+        <div class="timer__unit"><span class="timer__num" id="tDays">000</span><span class="timer__label">days</span></div>
+        <div class="timer__unit"><span class="timer__num" id="tHours">00</span><span class="timer__label">hours</span></div>
+        <div class="timer__unit"><span class="timer__num" id="tMins">00</span><span class="timer__label">minutes</span></div>
+        <div class="timer__unit"><span class="timer__num" id="tSecs">00</span><span class="timer__label">seconds</span></div>
+      </div>
+
+      <p class="floral-caption" id="timerCaption">This is how long I&rsquo;ve loved you, and I&rsquo;ve never regretted a single second of it.</p>
+
+      <button class="floral-btn" id="toLinksBtn">Continue &rarr;</button>
+    </div>
+  </section>
+
+  <!-- SCENE 9 — Links -->
+  <section class="scene scene--links" data-scene="links" id="scene-links">
+    <h2 class="title-serif">A Little More</h2>
+    <div class="link-row">
+      <a class="pill-btn" id="spotifyBtn" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20zm4.6 14.4a.6.6 0 01-.83.2c-2.27-1.4-5.13-1.7-8.5-.93a.6.6 0 11-.27-1.17c3.68-.84 6.84-.48 9.4 1.08a.6.6 0 01.2.82zm1.22-2.72a.75.75 0 01-1.03.25c-2.6-1.6-6.56-2.06-9.63-1.13a.75.75 0 01-.44-1.44c3.52-1.07 7.9-.55 10.85 1.27a.75.75 0 01.25 1.05zm.1-2.84C15.3 9 9.02 8.8 6.1 9.7a.9.9 0 11-.53-1.72c3.36-1.02 10.16-.78 13.9 1.44a.9.9 0 11-.92 1.55z"/></svg>
+        Our Playlist
+      </a>
+      <a class="pill-btn" id="tiktokBtn" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M16.6 5.82a4.28 4.28 0 01-3.13-1.39V15.7a5.1 5.1 0 11-4.4-5.06v2.6a2.5 2.5 0 102.5 2.5V2h2.4a4.28 4.28 0 003.7 3.7v2.4a6.6 6.6 0 01-1.07-.28v-.01z"/></svg>
+        Watch This
+      </a>
+      <button class="pill-btn" id="finalNoteBtn">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M4 4h16a1 1 0 011 1v14a1 1 0 01-1 1H4a1 1 0 01-1-1V5a1 1 0 011-1zm1 3.4V17h14V7.4l-7 4.6-7-4.6z"/></svg>
+        Final Note
+      </button>
+    </div>
+  </section>
+
+  <!-- SCENE 10 — Ending -->
+  <section class="scene scene--ending" data-scene="ending" id="scene-ending">
+    <p class="ending-line ending-line--1">This letter may end here&hellip;</p>
+    <p class="ending-line ending-line--2">But my feelings don't.</p>
+    <div class="ending-heart">&#129293;</div>
+  </section>
+
+</main>
+
+<audio id="bgAudio" src="assets/music.mp3" preload="auto"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
