@@ -1,56 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
   <defs>
-    <linearGradient id="petalFill" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f3e9d6"/>
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e6" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#fff8e6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="moonBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf3d8"/>
+      <stop offset="100%" stop-color="#f0dfa8"/>
     </linearGradient>
   </defs>
-
-  <!-- stems -->
-  <path d="M120,180 C118,210 116,235 118,258" stroke="#7f9a6d" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <path d="M95,175 C90,205 92,232 96,256" stroke="#7f9a6d" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <path d="M145,175 C150,205 148,232 144,256" stroke="#7f9a6d" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <!-- ribbon -->
-  <path d="M85,190 C110,205 130,205 155,190 L150,206 C128,218 112,218 90,206 Z" fill="#e8b7c2"/>
-
-  <!-- leaves -->
-  <path d="M120,150 C90,145 70,165 60,190 C95,190 115,175 120,150 Z" fill="#8fae7c"/>
-  <path d="M130,155 C160,150 182,168 190,192 C156,194 136,180 130,155 Z" fill="#7f9a6d"/>
-
-  <!-- lily flower group, repeated 3x at different positions/rotations -->
-  <g transform="translate(70,80) rotate(-12)">
-    <g id="lily-petals">
-      <ellipse cx="0" cy="-32" rx="10" ry="34" fill="url(#petalFill)" transform="rotate(0)"/>
-      <ellipse cx="0" cy="-32" rx="10" ry="34" fill="url(#petalFill)" transform="rotate(60)"/>
-      <ellipse cx="0" cy="-32" rx="10" ry="34" fill="url(#petalFill)" transform="rotate(120)"/>
-      <ellipse cx="0" cy="-32" rx="10" ry="34" fill="url(#petalFill)" transform="rotate(180)"/>
-      <ellipse cx="0" cy="-32" rx="10" ry="34" fill="url(#petalFill)" transform="rotate(240)"/>
-      <ellipse cx="0" cy="-32" rx="10" ry="34" fill="url(#petalFill)" transform="rotate(300)"/>
-    </g>
-    <circle cx="0" cy="0" r="7" fill="#e9c86a"/>
-  </g>
-
-  <g transform="translate(120,60) scale(1.15)">
-    <g>
-      <ellipse cx="0" cy="-32" rx="10" ry="34" fill="url(#petalFill)" transform="rotate(0)"/>
-      <ellipse cx="0" cy="-32" rx="10" ry="34" fill="url(#petalFill)" transform="rotate(60)"/>
-      <ellipse cx="0" cy="-32" rx="10" ry="34" fill="url(#petalFill)" transform="rotate(120)"/>
-      <ellipse cx="0" cy="-32" rx="10" ry="34" fill="url(#petalFill)" transform="rotate(180)"/>
-      <ellipse cx="0" cy="-32" rx="10" ry="34" fill="url(#petalFill)" transform="rotate(240)"/>
-      <ellipse cx="0" cy="-32" rx="10" ry="34" fill="url(#petalFill)" transform="rotate(300)"/>
-    </g>
-    <circle cx="0" cy="0" r="7.5" fill="#e9c86a"/>
-  </g>
-
-  <g transform="translate(168,85) rotate(14)">
-    <g>
-      <ellipse cx="0" cy="-30" rx="9" ry="32" fill="url(#petalFill)" transform="rotate(0)"/>
-      <ellipse cx="0" cy="-30" rx="9" ry="32" fill="url(#petalFill)" transform="rotate(60)"/>
-      <ellipse cx="0" cy="-30" rx="9" ry="32" fill="url(#petalFill)" transform="rotate(120)"/>
-      <ellipse cx="0" cy="-30" rx="9" ry="32" fill="url(#petalFill)" transform="rotate(180)"/>
-      <ellipse cx="0" cy="-30" rx="9" ry="32" fill="url(#petalFill)" transform="rotate(240)"/>
-      <ellipse cx="0" cy="-30" rx="9" ry="32" fill="url(#petalFill)" transform="rotate(300)"/>
-    </g>
-    <circle cx="0" cy="0" r="6.5" fill="#e9c86a"/>
-  </g>
+  <circle cx="100" cy="100" r="95" fill="url(#moonGlow)"/>
+  <path d="M118,32
+           a70,70 0 1,0 0,136
+           a56,60 0 1,1 0,-136 Z"
+        fill="url(#moonBody)"/>
+  <circle cx="95" cy="75" r="5" fill="#e9d19c" opacity="0.6"/>
+  <circle cx="120" cy="110" r="7" fill="#e9d19c" opacity="0.5"/>
+  <circle cx="90" cy="125" r="3.5" fill="#e9d19c" opacity="0.5"/>
 </svg>

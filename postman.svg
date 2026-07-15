@@ -1,20 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-  <defs>
-    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fff8e6" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#fff8e6" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="moonBody" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fdf3d8"/>
-      <stop offset="100%" stop-color="#f0dfa8"/>
-    </linearGradient>
-  </defs>
-  <circle cx="100" cy="100" r="95" fill="url(#moonGlow)"/>
-  <path d="M118,32
-           a70,70 0 1,0 0,136
-           a56,60 0 1,1 0,-136 Z"
-        fill="url(#moonBody)"/>
-  <circle cx="95" cy="75" r="5" fill="#e9d19c" opacity="0.6"/>
-  <circle cx="120" cy="110" r="7" fill="#e9d19c" opacity="0.5"/>
-  <circle cx="90" cy="125" r="3.5" fill="#e9d19c" opacity="0.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 60">
+  <path d="M20,2 C32,14 34,34 20,58 C6,34 8,14 20,2 Z"
+        fill="#faf3e4"/>
+  <path d="M20,6 C29,16 30,32 20,52 C10,32 11,16 20,6 Z"
+        fill="#f3e6cf" opacity="0.6"/>
+  <line x1="20" y1="10" x2="20" y2="50" stroke="#e8d4ae" stroke-width="0.8" opacity="0.5"/>
 </svg>
