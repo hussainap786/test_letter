@@ -8,7 +8,7 @@
    - assets/photo.jpg  : referenced by .glass-card__photo in style.css
    ===================================================================== */
 
-const LETTER_TEXT = 'Heyyyyyyyyyyyyyy Amatullah 🩵 (Tichku)
+const LETTER_TEXT = `Heyyyyyyyyyyyyyy Amatullah 🩵 (Tichku)
 
 It's been such a beautiful 3 years together, and sometimes I just sit and think about everything we've been through, and it honestly makes me smile :) Three whole years of endless conversations, laughing over the most random things 🤍, staying up way longer than we should have just because neither of us wanted to end the chat, talking on calls for hours without even realizing how fast time was passing, teasing each other, making fun of each other heheee, creating memories that I'll carry with me forever, and finally getting to meet you for the very first time 🫶🏻 a moment I'll never ever forget. Every memory with you feels so special because it isn't just about what we did, it's about who I was doing it with. Even the smallest moments became my favourite memories because they had you in them 🩵
 
@@ -24,7 +24,7 @@ And I'll always love you 🤍
 
 With all my love, Yours Forever, may Allah protect you from all the evil eyes and may He fulfill all your dreams and heal you from all the things you never shared and may He always keep the beautiful smile of yours exactly the way it is because it deserves to shine forever. Ameen🤲🏻🫶🏻
 
-I loveee youuuuu sooo muchhhhh 🫶🏻🩵 and I'll alwayssss loveeeee youuuuu no matter whattttt, forever and alwaysss🤍🫂';
+I loveee youuuuu sooo muchhhhh 🫶🏻🩵 and I'll alwayssss loveeeee youuuuu no matter whattttt, forever and alwaysss🤍🫂`;
 
 const START_DATE = new Date('2023-04-19T00:00:00');
 const SPOTIFY_URL = 'https://open.spotify.com/playlist/0PJtdbtRpToQ7r6ka4PYQO?si=udOmEo_xRLiPKkVyaMK9ow&utm_source=copy-link&pt=3af1d42a8dd8920f21532e30581e5bd6';
