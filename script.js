@@ -8,23 +8,12 @@
    - assets/photo.jpg  : referenced by .glass-card__photo in style.css
    ===================================================================== */
 
-const LETTER_TEXT = `Heyyyyyyyyyyyyyy Amatullah 🩵 (Tichku)
+const LETTER_TEXT = `My dearest,
 
-It's been such a beautiful 3 years together, and sometimes I just sit and think about everything we've been through, and it honestly makes me smile :) Three whole years of endless conversations, laughing over the most random things 🤍, staying up way longer than we should have just because neither of us wanted to end the chat, talking on calls for hours without even realizing how fast time was passing, teasing each other, making fun of each other heheee, creating memories that I'll carry with me forever, and finally getting to meet you for the very first time 🫶🏻 a moment I'll never ever forget. Every memory with you feels so special because it isn't just about what we did, it's about who I was doing it with. Even the smallest moments became my favourite memories because they had you in them 🩵
+[ Paste your letter here. Keep paragraph breaks by leaving a blank line
+between paragraphs — the typewriter will honor them. ]
 
-There was a time when we stopped talking, and I won't pretend it didn't affect me because it did. It felt strange not having you around after you had become such an important part of my everyday life. But somehow, Allah had better plans for us, and we found our way back to each other, and honestly I think that's one of the most beautiful things that could've happened 🤍 Some people come into your life for a reason, but very few become a part of your heart, and you're one of them. Thank you for never giving up on this bond, thank you for coming back into my life, because I genuinely don't know what these years would've looked like without you :)
-
-You've been there during my happiest moments and my lowest ones, through the times when I laughed the hardest and the times when I didn't even know how to explain what I was feeling. Somehow you always knew how to make everything feel lighter. Whether it was one message, one call, one joke, or simply your presence, you made a difference without even realizing it 🩵 I don't think I'll ever be able to thank you enough for that :) You became my comfort, my peace, my safe place, and someone I can always be myself around without ever feeling judged. That's something so rare, and I'll never take it for granted 🤍
-
-I hope this bond never changes and never fades because it's one of the most precious things I have. I Love youuu so muchhh, more than I could ever put into words 🩵 Thank you for every smile you've given me, every laugh we've shared, every late-night conversation, every little argument that somehow made us stronger hahaha, every memory we've created, every time you've stood by my side, and every single moment you've made my life happier just by being a part of it. I'll cherish every second we've spent together for the rest of my life, and I honestly can't wait to see what the future has planned for us 🫶🏻 More memories, more laughter, more adventures, more random conversations, more moments where we forget about the world because we're too busy enjoying each other's company :)
-
-If there's one thing I'll always be sure about, it's you. No matter how much life changes, no matter where it takes us, no matter how many years pass, my heart will always choose you 🤍 I'd choose you in every lifetime, in every version of my life, over and over again without even thinking twice. You're one of the greatest blessings Allah has ever written into my life, and every day I'm thankful that our paths crossed. If one day someone asked me what home feels like, I'd probably never find the right words... but I'd know the feeling, because somehow it has always been you 🥹🫶🏻
-
-And I'll always love you 🤍
-
-With all my love, Yours Forever, may Allah protect you from all the evil eyes and may He fulfill all your dreams and heal you from all the things you never shared and may He always keep the beautiful smile of yours exactly the way it is because it deserves to shine forever. Ameen🤲🏻🫶🏻
-
-I loveee youuuuu sooo muchhhhh 🫶🏻🩵 and I'll alwayssss loveeeee youuuuu no matter whattttt, forever and alwaysss🤍🫂`;
+Forever yours.`;
 
 const START_DATE = new Date('2023-04-19T00:00:00');
 const SPOTIFY_URL = 'https://open.spotify.com/playlist/0PJtdbtRpToQ7r6ka4PYQO?si=udOmEo_xRLiPKkVyaMK9ow&utm_source=copy-link&pt=3af1d42a8dd8920f21532e30581e5bd6';
